@@ -5,7 +5,7 @@ import { ProductoModule } from './producto/producto.module';
 
 // *IMPORTAR MONGOOSE
 // ?PRIMER PASO
-import { MongooseModule } from '@nestjs/mongoose';
+//import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [ProductoModule],
