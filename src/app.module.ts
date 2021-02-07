@@ -5,6 +5,7 @@ import { ProductoModule } from './producto/producto.module';
 
 // *IMPORTAR MONGOOSE
 // ?PRIMER PASO
+// ?DESPUES HAY QUE DEFINIR UN SCHEMA
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
