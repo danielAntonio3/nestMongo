@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { ProductoController } from './producto.controller';
 import { ProductoService } from './producto.service';
 
-// ?TERCER PASO ES INCRUSTAR EL SCHEMA
-// ?CUARTO PASO HAY QUE CREAR UNA INTERFACE
+// ?TERCER PASO ES INCRUSTAR EL SCHEMA  (PARA LA CONEXION)
+// ?HAY QUE CREAR UNA INTERFACE
 
 // *IMPORTACIONES NECESARIAS
 import { MongooseModule } from '@nestjs/mongoose';

@@ -4,7 +4,8 @@ import { AppService } from './app.service';
 import { ProductoModule } from './producto/producto.module';
 
 // *IMPORTAR MONGOOSE
-// ?PRIMER PASO
+// ?PRIMER PASO (PARA LA CONEXION)
+// ?INCRUSTAR LA URL DE LA CONEXION A MONGO
 // ?DESPUES HAY QUE DEFINIR UN SCHEMA
 import { MongooseModule } from '@nestjs/mongoose';
 

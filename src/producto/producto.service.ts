@@ -31,11 +31,26 @@ export class ProductoService {
   }
   // !FUNCION PARA CREAR UN PRODUCTO
   async createProducto(createProductoDTO: CreateProductDTO): Promise<Producto> {
-    const ProductoNuevo = await this.productoModel.create(createProductoDTO);
-    return ProductoNuevo;
+    const ProductoNuevo = new this.productoModel(createProductoDTO);
+    return await ProductoNuevo.save();
   }
   // !FUNCION PARA ELIMINRA UN PRODUCTO
-  deleteProducto() {}
+  async deleteProducto(produtoID: string): Promise<Producto> {
+    const ProductoEliminar = await this.productoModel.findByIdAndDelete(
+      produtoID,
+    );
+    return ProductoEliminar;
+  }
   // !FUNCION PARA ACTUALIZAR UN PRODUCTO
-  updateProducto() {}
+  async updateProducto(
+    produtoID: string,
+    createProductoDTO: CreateProductDTO,
+  ): Promise<Producto> {
+    const actualizarProducto = await this.productoModel.findByIdAndUpdate(
+      produtoID,
+      createProductoDTO,
+      { new: true },
+    );
+    return actualizarProducto;
+  }
 }
