@@ -8,6 +8,8 @@ import {
   Body,
   Res,
   HttpStatus,
+  NotFoundException,
+  HttpException,
 } from '@nestjs/common';
 
 // ? IMPORTANDO DTO (AYUDA A SABER QUE VALORES RECIBIRA)
@@ -43,9 +45,10 @@ export class ProductoController {
   @Get('productos/:productIdid')
   async producto(@Res() res, @Param('productIdid') productIdid: string) {
     const producto = await this.productoService.getProducto(productIdid);
-    res
-      .status(HttpStatus.OK)
-      .json({ message: 'Product found Successfully ', product: producto });
+    /*if (!producto) {
+      throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
+    }*/
+    res.status(HttpStatus.OK).json(producto);
   }
   // !ELIMINAR UN PRODUCTO
   @Delete('eliminar/:productIdid')
