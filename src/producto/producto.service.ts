@@ -49,6 +49,7 @@ export class ProductoService {
     const actualizarProducto = await this.productoModel.findByIdAndUpdate(
       produtoID,
       createProductoDTO,
+      // ?PARA QUE EN LA RESPUESTA MUESTRE EL PRODUCTO ACTUALIZADO
       { new: true },
     );
     return actualizarProducto;
