@@ -1,3 +1,4 @@
 {
-    "appService.deploySubpath": "dist\\producto"
+    "appService.deploySubpath": "dist\\producto",
+    "appService.defaultWebAppToDeploy": "/subscriptions/dfd12d3f-bfe1-418b-ace6-4269944bd00b/resourceGroups/pruebas-backend/providers/Microsoft.Web/sites/backpruebas"
 }
