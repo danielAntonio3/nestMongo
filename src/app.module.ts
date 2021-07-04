@@ -13,7 +13,7 @@ import { MongooseModule } from '@nestjs/mongoose';
   imports: [
     ProductoModule,
     MongooseModule.forRoot(
-      'mongodb+srv://danny:12345678a@cluster0.medst.mongodb.net/dbnest?retryWrites=true&w=majority',
+      'mongodb+srv://danny:************@cluster0.medst.mongodb.net/dbnest?retryWrites=true&w=majority',
     ),
   ],
   controllers: [AppController],
